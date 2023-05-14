@@ -1,31 +1,57 @@
 import Image from "next/image";
-import React from "react";
-import { BsTwitter } from "react-icons/bs";
-import { GrLinkedinOption } from "react-icons/gr";
-import { AiOutlineGithub } from "react-icons/ai";
-import { Socials } from "../socials/Socials";
+import React, { useState } from "react";
+import { projects } from "@/utils/project";
 import ProjectCard from "./ProjectCard";
 
 const Project: React.FC = () => {
+	const projectList: string[] = ["Jewel", "ibeep", "videoChat", "nameSearch"];
+
+	const [isactiveProject, setisactiveProject] = useState("Jewel");
+	console.log(isactiveProject);
+
+	const handleProjectDisaplay = ({ list }: { list: string }) => {
+		setisactiveProject(list);
+		projects.find((item) => {
+			if (item.name === isactiveProject) {
+				setisactiveProject(list);
+			}
+		});
+	};
 	return (
 		<section className='bg-[#212529] text-[#fff] w-[100%] h-[100vh] flex items-center  '>
 			<div className='w-[90%]  mx-auto flex flex-col  h-[70vh] overflow-y-scroll '>
-				<div className='mb-[2rem] px-[1rem] border-t-[20px] border-l-[20px] border-t-[#FC4A1A] border-l-[#FC4A1A] w-[150px] h-[150px]'>
-					<h1 className='font-south text-[70px] font-bold italic'>Projects</h1>
+				<div className='mb-[2rem] px-[1rem] border-t-[20px] border-l-[20px] border-t-[#fc831a] border-l-[#FC4A1A] w-[150px] h-[150px]'>
+					<h1 className='font-south text-[70px] font-bold italic text-[#fc831a]'>
+						Projects
+					</h1>
 				</div>
 				<div className='flex flex-col w-[70%] mx-auto'>
 					<div className='flex flex-col'>
-						<div className='flex mb-[3rem] justify-between p-2 '>
-							<li>Jewel Store</li>
-							<li>Jewel Store</li>
-							<li>Jewel Store</li>
-							<li>Jewel Store</li>
+						<div className='flex mb-[3rem] justify-between p-2 overflow-x-hidden w-[80%] mx-auto cursor-pointer'>
+							{projectList.map((list, idx) => (
+								<li
+									className={`${
+										isactiveProject === list
+											? "text-[#fc831a] border-b-[2px]  border-b-[#fc831a]"
+											: "text-white"
+									}`}
+									key={idx}
+									onClick={() => handleProjectDisaplay({ list })}>
+									{list}
+								</li>
+							))}
 						</div>
-						<ProjectCard />
+						{projects.map((project, idx) => (
+							<ProjectCard
+								key={idx}
+								project={project}
+								isactiveProject={isactiveProject}
+							/>
+						))}
 					</div>
 					<div className='flex flex-col mt-[4rem]'>
-						<h2 className='mb-[1rem] text-[24px] font-[700]'>
-							Technology Stack
+						<h2 className='mb-[1rem] text-[48px] font-[700] font-south italic font-bold text-[#fc831a]'>
+							<span className='text-[74px]'>T</span>echnology Stack
 						</h2>
 						<div className='grid grid-cols-3 sm:grid-cols-4 gap-[2rem] place-items-center'>
 							<div>
