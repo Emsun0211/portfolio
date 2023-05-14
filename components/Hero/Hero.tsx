@@ -23,18 +23,18 @@ const Hero = () => {
 								/>
 							</div>
 						</div>
-						<div className='sm:flex flex-col items-center w-[80%] mx-auto mt-[3rem] hidden  '>
-							<div className='text-[#fc831a] text-[2rem] flex justify-between gap-x-[2rem]'>
+						<div className='flex flex-col items-center w-[80%] mx-auto sm:mt-[3rem] mt-[1rem]  '>
+							<div className='text-[#fc831a] text-[2rem] flex items-center justify-between gap-x-[2rem]'>
 								<AiFillStar />
-								<h2 className='text-[24px] font-[700] text-white'>
+								<h2 className='text-[16px] sm:text-[24px] font-[700] text-white'>
 									Frontend Developer{" "}
 								</h2>
 								<AiFillStar />
 							</div>
-							<p className='text-center mt-[0.75rem] text-gray-500'>
+							{/* <p className='text-center mt-[0.75rem] text-gray-500'>
 								I create visually appealing web app that resonate with the user
 								needs
-							</p>
+							</p> */}
 						</div>
 					</div>
 					<div className='w-[100%] sm:w-[40%] mx-auto sm:text-left text-center'>

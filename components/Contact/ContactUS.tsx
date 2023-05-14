@@ -20,13 +20,13 @@ const ContactUS = () => {
 	return (
 		<section className='bg-[#212529] text-[#fff] w-[100%] h-[100vh] flex items-center  '>
 			<div className='w-[90%]  mx-auto  h-[60vh] overflow-y-scroll  mb-[4rem]'>
-				<h1 className='text-[74px] mt-[2rem] font-south italic bold text-[#fc831a] ml-[8rem] '>
+				<h1 className='text-[74px] mt-[2rem] font-south italic bold text-[#fc831a] ml-[0.5rem] sm:ml-[8rem] '>
 					Contact
 				</h1>
 				{/* <div className='flex justify-between items-center w-[80%] mx-auto gap-x-[2rem]'> */}
-				<div className='flex  justify-between gap-x-[2rem] w-[80%] mx-auto'>
-					<div className='w-[40%]'>
-						<div className='text-[30px] mb-[4rem] italic text-gray-400'>
+				<div className='flex flex-col sm:flex-row justify-between gap-x-[2rem] w-[90%] sm:w-[80%] mx-auto'>
+					<div className='w-[100%] sm:w-[40%]'>
+						<div className='sm:text-[30px] text-[24px] sm:mb-[4rem] mb-[1rem] italic text-gray-400'>
 							<h2>Got a project idea?</h2>
 							<h2>Get in touch</h2>
 						</div>
@@ -82,8 +82,8 @@ const ContactUS = () => {
 						}) => (
 							<form
 								onSubmit={handleSubmit}
-								className='flex flex-col gap-[1rem] w-[60%]'>
-								<div className='w-[500px] relative'>
+								className='flex flex-col gap-[1rem] sm:w-[60%] w-[100%]'>
+								<div className='sm:w-[500px] w-[100%] relative'>
 									<label
 										htmlFor='name'
 										className='absolute text-[#000] top-[35%] left-[2%]'>
@@ -100,7 +100,7 @@ const ContactUS = () => {
 									/>
 								</div>
 								{/* {errors.email && touched.email && errors.email} */}
-								<div className='w-[500px] relative '>
+								<div className='sm:w-[500px] w-[100%] relative '>
 									<label
 										htmlFor='email'
 										className='absolute text-[#000] top-[35%] left-[2%]'>
@@ -117,7 +117,7 @@ const ContactUS = () => {
 									/>
 								</div>
 								{/* {errors.email && touched.email && errors.email} */}
-								<div className='w-[500px] relative'>
+								<div className='sm:w-[500px] w-[100%] relative'>
 									<label
 										htmlFor='message'
 										className='absolute text-[#000] top-[8%] left-[2%]'>
@@ -137,7 +137,7 @@ const ContactUS = () => {
 								<button
 									type='submit'
 									disabled={isSubmitting}
-									className='p-2 bg-[#fffeee] w-[500px] text-[#000] rounded-[5px]'>
+									className='p-2 bg-[#fffeee] sm:w-[500px] w-[100%] text-[#000] rounded-[5px] mb-[2rem]'>
 									Submit
 								</button>
 							</form>

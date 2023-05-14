@@ -1,5 +1,6 @@
 import React from "react";
 import ExperienceCard from "./ExperienceCard";
+import { experience } from "@/utils/experience";
 
 const Experience = () => {
 	return (
@@ -9,11 +10,10 @@ const Experience = () => {
 					Experience
 				</h1>
 
-				<div className='grid grid-cols-2 items-center w-[60%] mx-auto gap-x-[2rem]'>
-					<ExperienceCard />
-					<ExperienceCard />
-					<ExperienceCard />
-					<ExperienceCard />
+				<div className='grid grid-cols-2 items-center w-[60%] mx-auto gap-x-[2rem] gap-y-[2rem]'>
+					{experience.map((experience, idx) => (
+						<ExperienceCard key={idx} experience={experience} />
+					))}
 				</div>
 			</div>
 		</section>

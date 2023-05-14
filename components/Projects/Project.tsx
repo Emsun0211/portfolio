@@ -4,7 +4,7 @@ import { projects } from "@/utils/project";
 import ProjectCard from "./ProjectCard";
 
 const Project: React.FC = () => {
-	const projectList: string[] = ["Jewel", "ibeep", "videoChat", "nameSearch"];
+	const projectList: string[] = ["Jewel", "ibeep", "videoChat", "Techtime"];
 
 	const [isactiveProject, setisactiveProject] = useState("Jewel");
 	console.log(isactiveProject);
@@ -20,14 +20,14 @@ const Project: React.FC = () => {
 	return (
 		<section className='bg-[#212529] text-[#fff] w-[100%] h-[100vh] flex items-center  '>
 			<div className='w-[90%]  mx-auto flex flex-col  h-[70vh] overflow-y-scroll '>
-				<div className='mb-[2rem] px-[1rem] border-t-[20px] border-l-[20px] border-t-[#fc831a] border-l-[#FC4A1A] w-[150px] h-[150px]'>
-					<h1 className='font-south text-[70px] font-bold italic text-[#fc831a]'>
+				<div className='mb-[2rem] px-[1rem] sm:border-t-[20px] sm:border-l-[20px] border-t-[10px] border-l-[10px] border-t-[#fc831a] border-l-[#FC4A1A] w-[150px] h-[150px]'>
+					<h1 className='font-south text-[60px] sm:text-[70px] font-bold italic text-[#fc831a]'>
 						Projects
 					</h1>
 				</div>
-				<div className='flex flex-col w-[70%] mx-auto'>
+				<div className='flex flex-col w-[100%] sm:w-[70%] mx-auto'>
 					<div className='flex flex-col'>
-						<div className='flex mb-[3rem] justify-between p-2 overflow-x-hidden w-[80%] mx-auto cursor-pointer'>
+						<div className='flex sm:mb-[3rem] mb-[1rem] justify-between p-2 overflow-x-hidden w-[100%] sm:w-[80%] mx-auto cursor-pointer'>
 							{projectList.map((list, idx) => (
 								<li
 									className={`${
@@ -50,8 +50,9 @@ const Project: React.FC = () => {
 						))}
 					</div>
 					<div className='flex flex-col mt-[4rem]'>
-						<h2 className='mb-[1rem] text-[48px] font-[700] font-south italic font-bold text-[#fc831a]'>
-							<span className='text-[74px]'>T</span>echnology Stack
+						<h2 className='mb-[1rem] sm:text-[48px] text-[36px] font-[700] font-south italic font-bold text-[#fc831a]'>
+							<span className='sm:text-[74px] text-[60px]'>T</span>echnology
+							Stack
 						</h2>
 						<div className='grid grid-cols-3 sm:grid-cols-4 gap-[2rem] place-items-center'>
 							<div>

@@ -11,17 +11,17 @@ export const projects: projects[] = [
 		name: "Jewel",
 		description:
 			"Jewel is an open source project ecommerce project built by a Team of four developers using Nextjs for the client side and Strapi Headless CMS for the server side and authetication",
-		url: "https://github.com/",
-		github: "https://github.com/",
-		image: "https://avatars.githubusercontent.com/",
+		url: "https://jewels-sigma.vercel.app/",
+		github: "https://github.com/Esinnation/Jewels.git",
+		image: "jewel.png",
 	},
 	{
 		name: "ibeep",
 		description:
 			"Jewel is an open source project ecommerce project built by a Team of four developers using Nextjs for the client side and Strapi Headless CMS for the server side and authetication",
-		url: "https://github.com/",
-		github: "https://github.com/",
-		image: "https://avatars.githubusercontent.com/",
+		url: "https://ibeep-project.vercel.app/",
+		github: "https://github.com/atere21/ibeep-project.git",
+		image: "ibeep1.png",
 	},
 	{
 		name: "videoChat",
@@ -32,11 +32,11 @@ export const projects: projects[] = [
 		image: "https://avatars.githubusercontent.com/",
 	},
 	{
-		name: "nameSearch",
+		name: "Techtime",
 		description:
 			"Jewel is an open source project ecommerce project built by a Team of four developers using Nextjs for the client side and Strapi Headless CMS for the server side and authetication",
-		url: "https://github.com/",
-		github: "https://github.com/",
-		image: "https://avatars.githubusercontent.com/",
+		url: "https://talentplus.vercel.app/",
+		github: "https://github.com/Emsun0211/talentplus.git",
+		image: "techtime1.png",
 	},
 ];
